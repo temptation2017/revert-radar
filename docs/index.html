@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>回滚报告 · 示例仓库（虚构数据）</title>
+<style>
+:root{--bg:#fbfaf7;--fg:#1d1d1b;--mute:#76736c;--line:#e6e2d9;--c:#d9d3c5;--r:#c2410c}
+@media (prefers-color-scheme:dark){:root{--bg:#151513;--fg:#ecebe6;--mute:#9a978f;--line:#2c2b27;--c:#3a3832;--r:#fb923c}}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.55 -apple-system,"PingFang SC","Noto Sans SC",sans-serif}
+main{max-width:820px;margin:0 auto;padding:32px 20px 60px}
+h1{font-size:22px;margin:0 0 4px} h2{font-size:16px;margin:32px 0 10px}
+.sub{color:var(--mute)}
+.kpi{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:22px 0}
+.kpi div{border:1px solid var(--line);border-radius:10px;padding:12px}
+.kpi b{display:block;font-size:22px} .kpi span{color:var(--mute);font-size:13px}
+svg{width:100%;height:auto} svg .c{fill:var(--c)} svg .r{fill:var(--r)} svg text{font-size:10px;fill:var(--mute)}
+.b{display:grid;grid-template-columns:80px 1fr 40px;align-items:center;gap:10px;margin:4px 0}
+.b i{display:block;height:12px;background:var(--r);border-radius:3px;min-width:2px} .b b{text-align:right}
+table{width:100%;border-collapse:collapse} td{border-top:1px solid var(--line);padding:6px 8px;vertical-align:top}
+td:first-child{white-space:nowrap;color:var(--mute)} em{color:var(--r);font-style:normal;font-size:12px}
+code{font:13px ui-monospace,Menlo,monospace}
+.legend span{display:inline-block;width:10px;height:10px;margin:0 4px 0 12px;vertical-align:-1px}
+footer{margin-top:40px;color:var(--mute);font-size:12px}
+@media (max-width:600px){.kpi{grid-template-columns:repeat(2,1fr)}}
+</style></head><body><main>
+<h1>回滚报告 · 示例仓库（虚构数据）</h1>
+<div class="sub">2026-04-05 ~ 2026-07-29，64 个提交（不含合并提交）</div>
+<div class="kpi">
+<div><b>6</b><span>回滚提交</span></div>
+<div><b>9.38%</b><span>回滚率</span></div>
+<div><b>12.0 小时</b><span>提交到回滚（中位数）</span></div>
+<div><b>4</b><span>24 小时内回滚</span></div>
+</div>
+<h2>每月提交与回滚</h2>
+<div class="sub legend"><span style="background:var(--c)"></span>提交数<span style="background:var(--r)"></span>回滚数（两者各自按最大值缩放）</div>
+<svg viewBox="0 0 760 240" role="img" aria-label="每月提交与回滚"><rect x="29.0" y="91.8" width="174.0" height="118.2" class="c"><title>2026-04：13 个提交</title></rect><text x="116.0" y="230.0" text-anchor="middle">26-04</text><rect x="205.0" y="64.5" width="174.0" height="145.5" class="c"><title>2026-05：16 个提交</title></rect><text x="292.0" y="230.0" text-anchor="middle">26-05</text><rect x="381.0" y="10.0" width="174.0" height="200.0" class="c"><title>2026-06：22 个提交</title></rect><rect x="424.0" y="10.0" width="88.0" height="200.0" class="r"><title>2026-06：4 个回滚</title></rect><text x="468.0" y="230.0" text-anchor="middle">26-06</text><rect x="557.0" y="91.8" width="174.0" height="118.2" class="c"><title>2026-07：13 个提交</title></rect><rect x="600.0" y="110.0" width="88.0" height="100.0" class="r"><title>2026-07：2 个回滚</title></rect><text x="644.0" y="230.0" text-anchor="middle">26-07</text></svg>
+<h2>多久被回滚</h2><div class="b"><span>1 小时内</span><i style="width:100%"></i><b>2</b></div><div class="b"><span>1 天内</span><i style="width:100%"></i><b>2</b></div><div class="b"><span>1 周内</span><i style="width:50%"></i><b>1</b></div><div class="b"><span>30 天内</span><i style="width:50%"></i><b>1</b></div><div class="b"><span>更久</span><i style="width:0%"></i><b>0</b></div>
+<h2>最常被回滚牵连的文件</h2><table><tr><td>3</td><td><code>src/api/cache.go</code></td></tr><tr><td>2</td><td><code>src/api/auth.go</code></td></tr><tr><td>1</td><td><code>src/ui/theme.css</code></td></tr></table>
+
+<h2>全部回滚（6）</h2><table><tr><td>2026-07-29</td><td><code>84c7d6fa</code></td><td>7 分钟</td><td>Revert &quot;ui: tune contrast&quot;</td></tr><tr><td>2026-07-29</td><td><code>a0e3d175</code></td><td>20.0 天</td><td>Revert &quot;perf: cache warmup on boot&quot;</td></tr><tr><td>2026-06-27</td><td><code>13092bcf</code></td><td>2.0 小时</td><td>Reapply &quot;fix: token refresh race&quot; <em>重新合入</em></td></tr><tr><td>2026-06-27</td><td><code>44397d76</code></td><td>12.0 小时</td><td>Revert &quot;fix: token refresh race&quot;</td></tr><tr><td>2026-06-26</td><td><code>5e8a5c07</code></td><td>3.0 天</td><td>Revert &quot;feat: add response cache (take 2)&quot;</td></tr><tr><td>2026-06-02</td><td><code>2b4425ff</code></td><td>30 分钟</td><td>Revert &quot;feat: add response cache&quot;</td></tr></table>
+<footer>由 revert-radar 0.1.0 生成 · 回滚的回滚 1 个 · 找不到原提交 0 个</footer>
+</main></body></html>

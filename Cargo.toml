@@ -1,0 +1,13 @@
+[package]
+name = "revert-radar"
+version = "0.1.0"
+edition = "2021"
+description = "Find reverted commits in a git repo: revert rate, time-to-revert, hot files, relands. Zero-dependency CLI."
+license = "MIT"
+repository = "https://github.com/temptation2017/revert-radar"
+
+[dependencies]
+
+[profile.release]
+strip = true
+lto = true
